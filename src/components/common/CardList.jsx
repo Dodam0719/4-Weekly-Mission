@@ -11,9 +11,15 @@ function CardList() {
   const { data, error, loading } = useGetData("/sample/folder");
 
   // if (!data || data.length === 0) return <div>저장된 링크가 없습니다.</div>;
-  if (!data) return <div>CardList data가 null입니다.</div>;
-  if (loading) return <div>CardList 로딩중...</div>;
-  if (error) return <div>CardList에 에러가 발생했습니다.</div>;
+  // if (!data) return <div>CardList data가 null입니다.</div>;
+  if (loading)
+    return (
+      <div>카드 리스트 정보를 불러오는 중이예요. 잠시만 기다려주세요.</div>
+    );
+  if (error)
+    return (
+      <div>카드 리스트 정보를 조회하지 못했어요! 나중에 다시 시도해주세요.</div>
+    );
 
   return (
     <div className={style.card_list}>

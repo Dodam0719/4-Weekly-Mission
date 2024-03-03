@@ -5,9 +5,13 @@ import styles from "../styles/Profile.module.css";
 function Profile() {
   const { data, error, loading } = useGetData("/sample/folder");
 
-  if (!data) return <div>Profile data가 null입니다.</div>;
-  if (loading) return <div>Profile 로딩중...</div>;
-  if (error) return <div>Profile에 에러가 발생했습니다.</div>;
+  if (!data) return <div>프로필 정보가 없어요!</div>;
+  if (loading)
+    return <div>프로필 정보를 불러오는 중이예요. 잠시만 기다려주세요.</div>;
+  if (error)
+    return (
+      <div>프로필 정보를 조회하지 못했어요! 나중에 다시 시도해주세요.</div>
+    );
 
   console.log(data);
 
