@@ -12,3 +12,13 @@
 // }
 
 // export default FolderHeader;
+
+function FolderHeader() {
+  return (
+    <div>
+      <h2>FolderHeader 컴포넌트입니다.</h2>
+    </div>
+  );
+}
+
+export default FolderHeader;
