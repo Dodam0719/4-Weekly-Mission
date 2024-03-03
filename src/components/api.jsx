@@ -28,6 +28,10 @@ export async function getData(endpoint) {
   const response = await fetch(url);
 
   if (!response.ok) {
+    console.error(
+      "데이터를 불러오는데 실패했습니다. 상태 코드:",
+      response.status
+    );
     throw new Error("데이터를 불러오는데 실패했습니다.");
   }
 
