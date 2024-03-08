@@ -26,3 +26,13 @@
 // }
 
 // export default FolderContent;
+
+function FolderContent() {
+  return (
+    <div>
+      <h2>FolderContent입니다.</h2>
+    </div>
+  );
+}
+
+export default FolderContent;
