@@ -1,4 +1,5 @@
 import CommonContent from "../components/common/CommonContent";
+import SharedCardList from "../components/SharedCardList";
 import style from "../styles/SharedAndFolderContent.module.css";
 
 // SharedContent FolderContent 겹치는 부분은 공통 컴포넌트인 CommonContent로 관리
@@ -6,8 +7,9 @@ import style from "../styles/SharedAndFolderContent.module.css";
 function SharedContent() {
   return (
     <div className={style.shared_content}>
-      {/* <h2>SharedContent입니다.</h2> */}
-      <CommonContent />
+      <CommonContent>
+        <SharedCardList endpoint="/sample/folder" />
+      </CommonContent>
     </div>
   );
 }

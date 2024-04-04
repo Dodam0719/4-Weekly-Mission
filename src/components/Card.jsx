@@ -9,7 +9,16 @@ import no_img from "../image/card-no-image.svg";
 // CardHeader -> ~ago 표시되는 부분(card.createdAt 활용)
 // CardContent -> 설명 표시되는 부분(card.description 활용)
 // CardFooter -> 생성날짜 표시되는 부분(card.createdAt 활용)
-function Card({ id, createdAt, url, title, description, imageSource }) {
+function Card({
+  id,
+  createdAt,
+  url,
+  title,
+  description,
+  imageSource,
+  created_at,
+  image_source,
+}) {
   const handleClick = () => {
     window.open(url, "_blank");
   };
@@ -19,14 +28,16 @@ function Card({ id, createdAt, url, title, description, imageSource }) {
       <div className={style.card_img_container}>
         <img
           className={style.card_img}
-          src={imageSource || no_img}
+          src={imageSource || image_source || no_img}
           alt={title}
         />
       </div>
       <div className={style.card_info}>
-        <CardHeader createdAt={createdAt} />
+        {createdAt && <CardHeader createdAt={createdAt} />}
+        {created_at && <CardHeader createdAt={created_at} />}
         <CardContent description={description} />
-        <CardFooter createdAt={createdAt} />
+        {createdAt && <CardFooter createdAt={createdAt} />}
+        {created_at && <CardFooter createdAt={created_at} />}
       </div>
     </div>
   );

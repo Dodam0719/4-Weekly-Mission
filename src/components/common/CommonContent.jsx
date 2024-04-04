@@ -1,6 +1,5 @@
 import React from "react";
 import CommonContentSearch from "./CommonContentSearch";
-import CardList from "./CardList";
 import style from "../../styles/CommonContent.module.css";
 
 // SharedContent에는 additionalContent 없음X, FolderHeader에서는 additionalContent 있음O
@@ -11,7 +10,6 @@ function CommonContent({ children }) {
     <div className={style.content_container}>
       <CommonContentSearch />
       {children}
-      <CardList />
     </div>
   );
 }
