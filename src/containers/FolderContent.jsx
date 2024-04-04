@@ -2,7 +2,7 @@ import React from "react";
 import CommonContent from "../components/common/CommonContent";
 import FolderList from "../components/FolderList";
 import AddFolderButton from "../components/AddFolderButton";
-import style from "../styles/SharedContent.module.css";
+import style from "../styles/SharedAndFolderContent.module.css";
 // import FolderActions from "../components/FolderActions";
 
 // // SharedContent FolderContent 겹치는 부분은 공통 컴포넌트인 CommonContent로 관리
@@ -33,10 +33,11 @@ function FolderContent() {
   return (
     <div className={style.shared_content}>
       <CommonContent>
-        <div>
+        <div className={style.folder_info}>
           <FolderList endpoint="/users/1/folders" />
           <AddFolderButton />
         </div>
+        <div className={style.content_info}></div>
       </CommonContent>
     </div>
   );

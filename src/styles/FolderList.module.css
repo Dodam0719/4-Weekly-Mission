@@ -1,5 +1,5 @@
 .tabs {
-  height: 2.1875rem;
+  min-height: 2.1875rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
