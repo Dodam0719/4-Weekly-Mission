@@ -1,5 +1,4 @@
-.folder_info,
-.content_info {
+.folder_info {
   min-height: 2.1875rem;
   display: flex;
   justify-content: space-between;
@@ -8,6 +7,10 @@
 
 .content_info {
   height: 1.8125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1123px) {
