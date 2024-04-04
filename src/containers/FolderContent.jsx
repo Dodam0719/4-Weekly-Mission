@@ -1,7 +1,7 @@
 import React from "react";
 import CommonContent from "../components/common/CommonContent";
 import FolderList from "../components/FolderList";
-// import AddFolderButton from "../components/AddFolderButton";
+import AddFolderButton from "../components/AddFolderButton";
 import style from "../styles/SharedContent.module.css";
 // import FolderActions from "../components/FolderActions";
 
@@ -33,7 +33,10 @@ function FolderContent() {
   return (
     <div className={style.shared_content}>
       <CommonContent>
-        <FolderList endpoint="/users/1/folders" />
+        <div>
+          <FolderList endpoint="/users/1/folders" />
+          <AddFolderButton />
+        </div>
       </CommonContent>
     </div>
   );

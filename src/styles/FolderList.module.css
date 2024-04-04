@@ -6,7 +6,7 @@
   gap: 0.5rem;
 }
 
-button {
+.tabs button {
   height: 2.1875rem;
   display: inline-flex;
   padding: 0.5rem 0.75rem;
@@ -19,12 +19,12 @@ button {
   background: #fff;
 }
 
-button:hover {
+.tabs button:hover {
   background: var(--Linkbrary-gray10, #e7effb);
 }
 
-.active,
-button.active:hover {
+.tabs button.active,
+.tabs button.active:hover {
   color: #fff;
   background: var(--Linkbrary-primary-color, #6d6afe);
 }
