@@ -18,6 +18,7 @@ function Card({
   imageSource,
   created_at,
   image_source,
+  showKebabMenu,
 }) {
   const handleClick = () => {
     window.open(url, "_blank");
@@ -33,8 +34,12 @@ function Card({
         />
       </div>
       <div className={style.card_info}>
-        {createdAt && <CardHeader createdAt={createdAt} />}
-        {created_at && <CardHeader createdAt={created_at} />}
+        {createdAt && (
+          <CardHeader createdAt={createdAt} showKebabMenu={false} />
+        )}
+        {created_at && (
+          <CardHeader createdAt={created_at} showKebabMenu={true} />
+        )}
         <CardContent description={description} />
         {createdAt && <CardFooter createdAt={createdAt} />}
         {created_at && <CardFooter createdAt={created_at} />}
