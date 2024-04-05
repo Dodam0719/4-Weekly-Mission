@@ -30,7 +30,7 @@ function FolderContent() {
         </div>
         <div className={style.content_info}>
           <span>유용한 글</span>
-          <ContentActions />
+          {selectedFolderId && <ContentActions />}
         </div>
         <FolderCardList
           endpoint={`/users/1/links${selectedFolderId ? `?folderId=${selectedFolderId}` : ""}`}
