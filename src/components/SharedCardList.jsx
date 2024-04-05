@@ -22,7 +22,9 @@ function SharedCardList({ endpoint }) {
   return (
     <div className={style.card_list}>
       {data &&
-        data.folder.links.map((link) => <Card key={link.id} {...link} />)}
+        data.folder.links.map((link) => (
+          <Card key={link.id} showStarButton={false} {...link} />
+        ))}
     </div>
   );
 }

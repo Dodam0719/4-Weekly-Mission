@@ -9,6 +9,7 @@
   height: calc(15.85913rem - (1.625rem + 1.75rem));
   border-radius: 0.94rem 0.94rem 0 0;
   overflow: hidden;
+  position: relative;
 }
 
 .card:hover .card_img {
@@ -20,6 +21,19 @@
   width: 21.25rem;
   height: calc(15.85913rem - (1.625rem + 1.75rem));
   background: lightgray 50% / cover no-repeat;
+}
+
+.star_button {
+  width: 2.125rem;
+  height: 2.125rem;
+  position: absolute;
+  top: 0.94rem;
+  right: 0.94rem;
+
+  border: none;
+  background-image: url("../image/icons/star.svg");
+  background-position: center center;
+  background-color: inherit;
 }
 
 .card_info {

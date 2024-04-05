@@ -29,7 +29,9 @@ function FolderCardList({ endpoint }) {
     <div className={style.card_list}>
       {data &&
         Array.isArray(data.data) &&
-        data.data.map((link) => <Card key={link.id} {...link} />)}
+        data.data.map((link) => (
+          <Card key={link.id} showStarButton={true} {...link} />
+        ))}
     </div>
   );
 }

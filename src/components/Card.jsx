@@ -18,7 +18,7 @@ function Card({
   imageSource,
   created_at,
   image_source,
-  showKebabMenu,
+  showStarButton,
 }) {
   const handleClick = () => {
     window.open(url, "_blank");
@@ -32,6 +32,7 @@ function Card({
           src={imageSource || image_source || no_img}
           alt={title}
         />
+        {showStarButton && <button className={style.star_button}></button>}
       </div>
       <div className={style.card_info}>
         {createdAt && (
