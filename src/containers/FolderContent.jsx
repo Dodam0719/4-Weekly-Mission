@@ -26,7 +26,7 @@ function FolderContent() {
             endpoint="/users/1/folders"
             onFolderSelect={handleFolderSelect}
           />
-          <AddFolderButton />
+          <AddFolderButton className={style.add_folder_button} />
         </div>
         <div className={style.content_info}>
           <span>유용한 글</span>
